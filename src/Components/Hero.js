@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { hero_img1, hero_img2, hero_img3, hero_img4, mbToken } from '../assets';
+import {
+  hero_img1,
+  hero_img2,
+  hero_img3,
+  hero_img4,
+  mbToken,
+  metaTask,
+  openSea,
+} from '../assets';
 import { colors, space } from '../styles/variables';
 
 const Hero = () => {
@@ -40,6 +48,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="companies">
+        <img src={mbToken} alt="logo" />
+        <img src={metaTask} alt="logo" />
+        <img src={openSea} alt="logo" />
       </div>
     </Wrapper>
   );
@@ -108,6 +121,7 @@ const Wrapper = styled.div`
       }
       button {
         flex-basis: 30%;
+        padding: 1rem 0.3rem;
         background: ${colors.bg};
         font-size: inherit;
         color: ${colors.bgAlpha};
@@ -134,6 +148,23 @@ const Wrapper = styled.div`
       }
       & > div:last-of-type {
         transform: translateY(-15%);
+      }
+    }
+  }
+  .companies {
+    padding: 0.5rem 0;
+    background: ${colors.bg};
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media (min-width: 600px) {
+      padding: 1rem;
+    }
+    img {
+      height: 1rem;
+
+      @media (min-width: 600px) {
+        height: 1.5rem;
       }
     }
   }
