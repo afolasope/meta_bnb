@@ -37,4 +37,9 @@ p{
   border: none;
   border-radius: ${space.borderRadius};
   cursor: pointer;
-}`;
+}
+input{
+  font-family: inherit;
+  font-size: inherit;
+}
+`;

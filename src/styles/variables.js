@@ -15,6 +15,6 @@ export const space = {
   mdSpacing: `1.5rem`,
   lgSpacing: `2rem`,
   xlSpacing: `3rem`,
-  xxlSpacing: `5rem`,
+  xxlSpacing: `8rem`,
   borderRadius: `6px`,
 };
