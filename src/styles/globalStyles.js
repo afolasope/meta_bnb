@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 html {
   font-family: 'Red Rose', cursive;
   font-size: clamp(1rem, .6rem + .5vw, 1.8rem);
-  
 }
 a{
     text-decoration: none;
