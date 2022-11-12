@@ -145,4 +145,55 @@ const Wrapper = styled.div`
   @media (min-width: 1200px) {
     padding: 5rem ${space.xxlSpacing};
   }
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 600px) {
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5rem;
+    }
+  }
+  @media (min-width: 900px) {
+    .card-container {
+      margin-bottom: 1.5rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 0.5rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem;
+    }
+  }
+
+  .card-container {
+    border: 1px solid #d7d7d7;
+    border-radius: 12px;
+    padding: 0.5rem;
+    p {
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .img-container {
+    img {
+      width: 100%;
+    }
+  }
 `;
