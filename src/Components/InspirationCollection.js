@@ -140,10 +140,10 @@ export default InspirationClooection;
 const Wrapper = styled.div`
   padding: 2rem;
   @media (min-width: 800px) {
-    padding: 5rem ${space.lgSpacing};
+    padding: 4rem ${space.lgSpacing};
   }
   @media (min-width: 1200px) {
-    padding: 5rem ${space.xxlSpacing};
+    padding: 4rem ${space.xxlSpacing};
   }
   h3 {
     text-align: center;

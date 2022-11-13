@@ -66,10 +66,10 @@ const Wrapper = styled.div`
     border: 1px solid gray;
     padding: 2rem;
     @media (min-width: 800px) {
-      padding: 5rem ${space.lgSpacing};
+      padding: 7rem ${space.lgSpacing};
     }
     @media (min-width: 1200px) {
-      padding: 5rem ${space.xxlSpacing};
+      padding: 7rem ${space.xxlSpacing};
     }
   }
   .hero-text {

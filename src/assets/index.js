@@ -15,6 +15,9 @@ import inspo6 from './inspo-6.svg';
 import inspo7 from './inspo-7.svg';
 import inspo8 from './inspo-8.svg';
 import stars from './stars.svg';
+import meta1 from './meta-1.svg';
+import meta2 from './meta-2.svg';
+import meta3 from './meta-3.svg';
 
 export {
   LogoSvg,
@@ -34,4 +37,7 @@ export {
   inspo7,
   inspo8,
   stars,
+  meta1,
+  meta2,
+  meta3,
 };
