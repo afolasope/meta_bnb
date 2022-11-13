@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { LogoSvg } from '../assets';
 import { colors, space } from '../styles/variables';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMdClose } from 'react-icons/io';
 
-const Navbar = () => {
+const Navbar = ({ navbarOpen, setNavbarOpen }) => {
   return (
     <Wrapper>
       <div className="logo-container">
@@ -26,22 +28,31 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div>
+      <div className="btn-container">
         <button className="btn btn-contribute">Connect Wallet</button>
+      </div>
+      <div
+        className="nav-btns"
+        onClick={() => {
+          setNavbarOpen(!navbarOpen);
+          console.log(navbarOpen);
+        }}
+      >
+        <GiHamburgerMenu className={navbarOpen ? 'hide' : 'close-nav'} />
+        <IoMdClose className={navbarOpen ? 'open-nav' : 'hide'} />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  border: 1px solid red;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   .logo-container {
     height: 1.5rem;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
@@ -58,14 +69,49 @@ const Wrapper = styled.div`
     color: ${colors.bgAlpha};
   }
   nav {
-    color: ${colors.textPry};
-    width: 40%;
-    ul {
-      display: flex;
-      justify-content: space-between;
-      list-style-type: none;
+    display: none;
+    @media (min-width: 800px) {
+      display: block;
+      color: ${colors.textPry};
+      width: 40%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
     }
   }
+  .btn-container {
+    display: none;
+    @media (min-width: 800px) {
+      display: block;
+    }
+  }
+  .nav-btns {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 60;
+
+    .open-nav,
+    .close-nav {
+      height: 100%;
+    }
+    /* .close-nav {
+      display: none;
+    } */
+        @media (min-width: 800px) {
+          display: none;
+        }
+  }
+  .hide {
+    display: none;
+  }
+
 `;
 
 export default Navbar;

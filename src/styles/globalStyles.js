@@ -42,4 +42,7 @@ input{
   font-family: inherit;
   font-size: inherit;
 }
+.hide{
+  display: none;
+}
 `;
