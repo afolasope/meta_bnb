@@ -35,7 +35,11 @@ import place14 from './place-14.svg';
 import place15 from './place-15.svg';
 import place16 from './place-16.svg';
 import settings from './setting-5.svg';
-
+import logo2 from './logo2.svg';
+import facebook from './facebook.svg';
+import twitter from './twitter.svg';
+import instagram from './instagram.svg';
+import copyright from './copyright.svg';
 
 export {
   LogoSvg,
@@ -74,5 +78,10 @@ export {
   place14,
   place15,
   place16,
-  settings
+  settings,
+  logo2,
+  facebook,
+  twitter,
+  instagram,
+  copyright,
 };
