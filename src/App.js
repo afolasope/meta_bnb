@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Footer from './Components/Footer';
 import MobileNavbar from './Components/MobileNavbar';
 import Navbar from './Components/Navbar';
-import ConnectWallet from './Pages/ConnectWallet/ConnectWallet';
+import ConnectWallet from './Pages/Places/Places';
 import Home from './Pages/Home/Home';
 
 function App() {

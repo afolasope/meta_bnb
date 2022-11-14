@@ -18,6 +18,21 @@ import stars from './stars.svg';
 import meta1 from './meta-1.svg';
 import meta2 from './meta-2.svg';
 import meta3 from './meta-3.svg';
+import place1 from './place-1.svg';
+import place2 from './place-2.svg';
+import place3 from './place-3.svg';
+import place4 from './place-4.svg';
+import place5 from './place-5.png';
+import place6 from './place-6.svg';
+import place7 from './place-7.svg';
+import place8 from './place-8.svg';
+import place9 from './place-9.svg';
+import place10 from './place-10.svg';
+import place11 from './place-11.svg';
+import place13 from './place-13.svg';
+import place14 from './place-14.svg';
+import place15 from './place-15.svg';
+import place16 from './place-16.svg';
 
 export {
   LogoSvg,
@@ -40,4 +55,19 @@ export {
   meta1,
   meta2,
   meta3,
+  place1,
+  place2,
+  place3,
+  place4,
+  place5,
+  place6,
+  place7,
+  place8,
+  place9,
+  place10,
+  place11,
+  place13,
+  place14,
+  place15,
+  place16,
 };
