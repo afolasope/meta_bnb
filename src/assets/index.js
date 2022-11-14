@@ -29,10 +29,13 @@ import place8 from './place-8.svg';
 import place9 from './place-9.svg';
 import place10 from './place-10.svg';
 import place11 from './place-11.svg';
+import place12 from './place-12.svg';
 import place13 from './place-13.svg';
 import place14 from './place-14.svg';
 import place15 from './place-15.svg';
 import place16 from './place-16.svg';
+import settings from './setting-5.svg';
+
 
 export {
   LogoSvg,
@@ -66,8 +69,10 @@ export {
   place9,
   place10,
   place11,
+  place12,
   place13,
   place14,
   place15,
   place16,
+  settings
 };

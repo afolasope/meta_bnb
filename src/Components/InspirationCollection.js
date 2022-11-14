@@ -127,7 +127,7 @@ const InspirationClooection = () => {
             <p>
               <span>2345km away </span> <span>available for 2 weeks stay</span>
             </p>
-            <img src={stars} alt="" />
+            <img src={stars} alt="rating" />
           </div>
         </div>
       </div>
