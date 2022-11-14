@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { copyright, facebook, instagram, logo2, twitter } from '../assets';
-import { colors } from '../styles/variables';
+import { colors, space } from '../styles/variables';
 
 const Footer = () => {
   return (
     <Wrapper>
-      <div>
+      <div className="container">
         <div>
           <div className="logo-container">
             <img src={logo2} alt="logo" className="logo" />
@@ -44,9 +44,12 @@ const Footer = () => {
           <li>Career</li>
           <li>Contact us</li>
         </ul>
-        <div className="copyright">
-          <img src={copyright} alt="" />
+        <div className="copyright mobile">
+          <img src={copyright} alt="copyright" />
         </div>
+      </div>
+      <div className="copyright desktop">
+        <img src={copyright} alt="copyright" />
       </div>
     </Wrapper>
   );
@@ -59,12 +62,35 @@ const Wrapper = styled.div`
   color: ${colors.bgAlpha};
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
+  @media (min-width: 690px) {
+    flex-direction: column;
+  }
+  @media (min-width: 800px) {
+    padding: 4rem ${space.lgSpacing};
+  }
+  @media (min-width: 1200px) {
+    padding: 4rem ${space.xxlSpacing};
+  }
+  /* @media (min-width: 690px) {
+    padding: 5rem;
+  } */
+  .container {
+    width: 100%;
+    @media (min-width: 690px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   .logo-container {
     margin-bottom: 1rem;
+    text-align: center;
   }
   .logo {
-    height: 2rem;
+    height: 1.5rem;
+    @media (min-width: 690px) {
+      height: 2rem;
+    }
   }
   .social-icons {
     margin-bottom: 1.5rem;
@@ -79,7 +105,7 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       font-weight: lighter;
     }
   }
@@ -89,5 +115,17 @@ const Wrapper = styled.div`
   }
   .copyright {
     text-align: center;
+    &.mobile {
+      @media (min-width: 690px) {
+        display: none;
+      }
+    }
+    &.desktop {
+      align-self: flex-start;
+      display: none;
+      @media (min-width: 696px) {
+        display: block;
+      }
+    }
   }
 `;
