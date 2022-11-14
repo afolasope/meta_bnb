@@ -92,7 +92,7 @@ const Places = () => {
           {places.map((item, index) => {
             return <li key={index}> {item}</li>;
           })}
-          <li>
+          <li className="location">
             <span>location</span>
             <span>
               <img src={settings} alt="" />
@@ -128,7 +128,7 @@ const Places = () => {
 export default Places;
 
 const Wrapper = styled.div`
-  padding: 2rem;
+  padding: 0.8rem;
   position: relative;
   @media (min-width: 700px) {
     padding: 3rem ${space.lgSpacing};
@@ -141,19 +141,48 @@ const Wrapper = styled.div`
     padding: 1rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
+    .img-container {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
   ul {
     list-style-type: none;
     color: ${colors.textPry};
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid {
     display: flex;
-    justify-content: center;
+    margin-bottom: 5rem;
+    flex-flow: wrap;
+    gap: 1rem;
+    @media (min-width: 1200px) {
+      gap: 1.5rem;
+    }
+    li {
+      padding: 0.3em 0.6em;
+      border-radius: 6px;
+      text-transform: capitalize;
+
+      &:hover {
+        cursor: pointer;
+        background: hsl(318, 40%, 39%);
+        color: white;
+      }
+    }
+  }
+  .location {
+    border: 1px solid #d7d7d7;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    @media (min-width: 600px) {
+    img {
+      height: 0.8rem;
+      margin-left: 0.5rem;
+      margin-top: 0.3rem;
+    }
+  }
+   .grid {
+    @media (min-width: 500px) {
       display: grid;
       grid-gap: 1rem;
       grid-template-columns: 1fr 1fr;
@@ -166,5 +195,5 @@ const Wrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-  }
+  } 
 `;
