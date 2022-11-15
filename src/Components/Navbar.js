@@ -11,7 +11,9 @@ const Navbar = ({ navbarOpen, setNavbarOpen, isModalOpen, setModalOpen }) => {
   return (
     <Wrapper>
       <div className="logo-container">
+        <Link to='/'>
         <img src={LogoSvg} alt="logo" />
+        </Link>
       </div>
       <nav>
         <ul>
@@ -65,7 +67,7 @@ const Wrapper = styled.div`
     padding: 2rem ${space.lgSpacing};
   }
   @media (min-width: 1200px) {
-    padding: 2rem ${space.xxlSpacing};
+    padding: 2rem ${space.xlSpacing};
   }
 
   nav {
@@ -78,6 +80,13 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+        li:hover {
+          color: purple;
+          background-image: ${colors.bg};
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
       }
     }
   }
@@ -99,6 +108,7 @@ const Wrapper = styled.div`
     .open-nav,
     .close-nav {
       height: 100%;
+      color: #a02279;
     }
     @media (min-width: 800px) {
       display: none;

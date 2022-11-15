@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { caretRight, metatask2, walletconnect } from '../assets';
+import { metatask2, walletconnect } from '../assets';
 import { IoMdClose } from 'react-icons/io';
 import { AiOutlineRight } from 'react-icons/ai';
 
@@ -11,7 +11,7 @@ const ModalWallet = ({ isModalOpen, setModalOpen }) => {
         <div className="title">
           <p>Connect Wallet</p>
           <span>
-            <IoMdClose onClick={() => setModalOpen(false)} />
+            <IoMdClose className='close-modal' onClick={() => setModalOpen(false)} />
           </span>
         </div>
         <hr />
@@ -44,12 +44,16 @@ const Wrapper = styled.div`
     position: fixed;
     border-radius: 12px;
     background-color: white;
-    width: 50%;
+    width: 70%;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 60;
     transition: all 0.5s ease-in;
+    @media (min-width: 760px) {
+      width: 50%;
+      transform: translateX(-50%);
+    }
   }
   .title {
     padding: 1rem;
@@ -66,9 +70,12 @@ const Wrapper = styled.div`
   }
   .details {
     padding: 1rem;
-    p{
+    p {
       margin-bottom: 1rem;
     }
+  }
+  .close-modal {
+    cursor: pointer;
   }
   .btn-container {
     button {
@@ -86,9 +93,12 @@ const Wrapper = styled.div`
       &:hover {
         background-color: #f8f9fa;
       }
+      img {
+        height: 2rem;
+      }
     }
   }
   .arrow {
-    background-color: cfd8dc;
+    color: #cfd8dc;
   }
 `;

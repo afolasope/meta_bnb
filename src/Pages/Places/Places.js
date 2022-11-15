@@ -134,7 +134,7 @@ const Wrapper = styled.div`
     padding: 3rem ${space.lgSpacing};
   }
   @media (min-width: 1200px) {
-    padding: 6rem ${space.xxlSpacing};
+    padding: 6rem ${space.xlSpacing};
   }
   .card-container {
     border: 1px solid #d7d7d7;

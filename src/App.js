@@ -54,7 +54,7 @@ export default App;
 const Wrapper = styled.div`
   position: relative;
   header {
-    position: relative;
+    position: sticky;
   }
   .overlay {
     position: fixed;

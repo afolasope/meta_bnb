@@ -68,7 +68,7 @@ const Wrapper = styled.div`
       padding: 7rem ${space.lgSpacing};
     }
     @media (min-width: 1200px) {
-      padding: 7rem ${space.xxlSpacing};
+      padding: 7rem ${space.xlSpacing};
     }
   }
   .hero-text {
@@ -87,8 +87,10 @@ const Wrapper = styled.div`
         margin-bottom: 2rem;
       }
       span {
-        color: ${colors.bg};
-        color: purple;
+        background-image: ${colors.bg};
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
       }
     }
     p {

@@ -143,7 +143,7 @@ const Wrapper = styled.div`
     padding: 4rem ${space.lgSpacing};
   }
   @media (min-width: 1200px) {
-    padding: 4rem ${space.xxlSpacing};
+    padding: 4rem ${space.xlSpacing};
   }
   h3 {
     text-align: center;
@@ -170,7 +170,7 @@ const Wrapper = styled.div`
       grid-gap: 0.5rem;
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: px) {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;

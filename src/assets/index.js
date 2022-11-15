@@ -44,6 +44,7 @@ import metatask2 from './metatask-2.svg';
 import times from './times.svg';
 import caretRight from './caret-right.svg';
 import walletconnect from './walletconnect.svg';
+import boxes from './boxes.svg';
 
 export {
   LogoSvg,
@@ -92,4 +93,5 @@ export {
   caretRight,
   times,
   walletconnect,
+  boxes
 };
