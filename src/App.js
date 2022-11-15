@@ -62,6 +62,5 @@ const Wrapper = styled.div`
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
- 
   }
 `;

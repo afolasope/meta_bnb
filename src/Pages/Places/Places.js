@@ -163,8 +163,8 @@ const Wrapper = styled.div`
     margin-bottom: 3rem;
 
     @media (min-width: 960px) {
-       display: flex;
-      gap: 1.5rem;
+      display: flex;
+      gap: 2.5rem;
     }
 
     li {

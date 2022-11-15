@@ -4,11 +4,7 @@ import styled from 'styled-components';
 import { colors } from '../styles/variables';
 import ConnectWalletBtn from './btn/ConnectWalletBtn';
 
-const MobileNavbar = ({
-  setNavbarOpen,
-  isModalOpen,
-  setModalOpen,
-}) => {
+const MobileNavbar = ({ setNavbarOpen, isModalOpen, setModalOpen }) => {
   return (
     <Wrapper>
       <ul onClick={() => setNavbarOpen(false)}>
@@ -39,7 +35,7 @@ export default MobileNavbar;
 
 const Wrapper = styled.nav`
   padding: 1rem;
-    box-shadow: 0px 6px 10px -11px #111;    
+  box-shadow: 0px 6px 10px -11px #111;
 
   @media (min-width: 800px) {
     display: none;
@@ -49,6 +45,7 @@ const Wrapper = styled.nav`
     list-style-type: none;
     li {
       margin-bottom: 0.7rem;
+      padding: 0.3rem;
     }
   }
   /* ul {
