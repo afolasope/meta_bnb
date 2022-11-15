@@ -170,7 +170,7 @@ const Wrapper = styled.div`
       grid-gap: 0.5rem;
     }
   }
-  @media (min-width: px) {
+  @media (min-width: 1200px) {
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
