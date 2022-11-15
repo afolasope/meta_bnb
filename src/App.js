@@ -6,6 +6,7 @@ import MobileNavbar from './Components/MobileNavbar';
 import Navbar from './Components/Navbar';
 import ConnectWallet from './Pages/Places/Places';
 import Home from './Pages/Home/Home';
+import ModalWallet from './Components/ModalWallet';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -20,6 +21,7 @@ function App() {
           console.log(navbarOpen);
         }}
       ></div>
+      <ModalWallet/>
       <header>
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
         {navbarOpen && (

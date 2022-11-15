@@ -40,6 +40,10 @@ import facebook from './facebook.svg';
 import twitter from './twitter.svg';
 import instagram from './instagram.svg';
 import copyright from './copyright.svg';
+import metatask2 from './metatask-2.svg';
+import times from './times.svg';
+import caretRight from './caret-right.svg';
+import walletconnect from './walletconnect.svg';
 
 export {
   LogoSvg,
@@ -84,4 +88,8 @@ export {
   twitter,
   instagram,
   copyright,
+  metatask2,
+  caretRight,
+  times,
+  walletconnect,
 };

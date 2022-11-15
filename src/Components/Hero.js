@@ -63,7 +63,6 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid gray;
     padding: 2rem;
     @media (min-width: 800px) {
       padding: 7rem ${space.lgSpacing};
