@@ -5,8 +5,9 @@ import { LogoSvg } from '../assets';
 import { colors, space } from '../styles/variables';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
+import ConnectWalletBtn from './btn/ConnectWalletBtn';
 
-const Navbar = ({ navbarOpen, setNavbarOpen }) => {
+const Navbar = ({ navbarOpen, setNavbarOpen, isModalOpen, setModalOpen }) => {
   return (
     <Wrapper>
       <div className="logo-container">
@@ -18,7 +19,7 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/connect-wallet">Place to stay</Link>
+            <Link to="/place-to-stay">Place to stay</Link>
           </li>
           <li>
             <Link to="#">NFTs</Link>
@@ -29,13 +30,16 @@ const Navbar = ({ navbarOpen, setNavbarOpen }) => {
         </ul>
       </nav>
       <div className="btn-container">
-        <button className="btn btn-contribute">Connect Wallet</button>
+        {/* <button className="btn btn-connect">Connect Wallet</button> */}
+        <ConnectWalletBtn
+          isModalOpen={isModalOpen}
+          setModalOpen={setModalOpen}
+        />
       </div>
       <div
         className="nav-btns"
         onClick={() => {
           setNavbarOpen(!navbarOpen);
-          console.log(navbarOpen);
         }}
       >
         <GiHamburgerMenu className={navbarOpen ? 'hide' : 'close-nav'} />
@@ -63,11 +67,7 @@ const Wrapper = styled.div`
   @media (min-width: 1200px) {
     padding: 2rem ${space.xxlSpacing};
   }
-  .btn-contribute {
-    background: ${colors.bg};
-    font-size: inherit;
-    color: ${colors.bgAlpha};
-  }
+
   nav {
     display: none;
     @media (min-width: 800px) {
@@ -95,23 +95,18 @@ const Wrapper = styled.div`
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    z-index: 60;
 
     .open-nav,
     .close-nav {
       height: 100%;
     }
-    /* .close-nav {
+    @media (min-width: 800px) {
       display: none;
-    } */
-        @media (min-width: 800px) {
-          display: none;
-        }
+    }
   }
   .hide {
     display: none;
   }
-
 `;
 
 export default Navbar;

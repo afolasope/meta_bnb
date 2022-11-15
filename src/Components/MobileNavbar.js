@@ -2,8 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../styles/variables';
+import ConnectWalletBtn from './btn/ConnectWalletBtn';
 
-const MobileNavbar = ({ navbarOpen, setNavbarOpen }) => {
+const MobileNavbar = ({
+  setNavbarOpen,
+  isModalOpen,
+  setModalOpen,
+}) => {
   return (
     <Wrapper>
       <ul onClick={() => setNavbarOpen(false)}>
@@ -11,7 +16,7 @@ const MobileNavbar = ({ navbarOpen, setNavbarOpen }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="connnect wallet">Place to stay</Link>
+          <Link to="place-to-stay">Place to stay</Link>
         </li>
         <li>
           <Link to="/">NFTs</Link>
@@ -20,7 +25,10 @@ const MobileNavbar = ({ navbarOpen, setNavbarOpen }) => {
           <Link to="/">Community</Link>
         </li>
         <div>
-          <button className="btn">Connect wallet</button>
+          <ConnectWalletBtn
+            isModalOpen={isModalOpen}
+            setModalOpen={setModalOpen}
+          />
         </div>
       </ul>
     </Wrapper>
@@ -30,10 +38,24 @@ const MobileNavbar = ({ navbarOpen, setNavbarOpen }) => {
 export default MobileNavbar;
 
 const Wrapper = styled.nav`
+  padding: 1rem;
+    box-shadow: 0px 6px 10px -11px #111;    
+
+  @media (min-width: 800px) {
+    display: none;
+  }
+
   ul {
+    list-style-type: none;
+    li {
+      margin-bottom: 0.7rem;
+    }
+  }
+  /* ul {
     position: absolute;
     padding: 2rem;
     transform: translateX(12%);
+    z-index: 15;
     width: 80%;
     list-style-type: none;
     background-color: white;
@@ -52,14 +74,14 @@ const Wrapper = styled.nav`
   }
   div {
     display: flex;
-    justify-content: center;
-    button {
+    justify-content: center; */
+  /* button {
       margin-top: 0.5rem;
       background: ${colors.bg};
       color: white;
-    }
-  }
-  @media (min-width: 800px) {
+    } */
+  /* } */
+  /* @media (min-width: 800px) {
     display: none;
-  }
+  } */
 `;

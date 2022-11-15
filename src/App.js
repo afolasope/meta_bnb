@@ -10,27 +10,40 @@ import ModalWallet from './Components/ModalWallet';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <Wrapper>
       <div
-        className={navbarOpen ? 'overlay' : 'hide'}
+        className={ isModalOpen ? 'overlay' : 'hide'}
         onClick={() => {
-          console.log('working');
           setNavbarOpen(false);
-          console.log(navbarOpen);
+          setModalOpen(false);
         }}
       ></div>
-      <ModalWallet/>
+      <ModalWallet
+        isModalOpen={isModalOpen}
+        setModalOpen={setModalOpen}
+      />
       <header>
-        <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+        <Navbar
+          navbarOpen={navbarOpen}
+          setNavbarOpen={setNavbarOpen}
+          isModalOpen={isModalOpen}
+          setModalOpen={setModalOpen}
+        />
         {navbarOpen && (
-          <MobileNavbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+          <MobileNavbar
+            navbarOpen={navbarOpen}
+            setNavbarOpen={setNavbarOpen}
+            isModalOpen={isModalOpen}
+            setModalOpen={setModalOpen}
+          />
         )}
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/connect-wallet" element={<ConnectWallet />} />
+        <Route path="/place-to-stay" element={<ConnectWallet />} />
       </Routes>
       <Footer />
     </Wrapper>
@@ -40,7 +53,6 @@ export default App;
 
 const Wrapper = styled.div`
   position: relative;
-
   header {
     position: relative;
   }
@@ -49,8 +61,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    @media (min-width: 800px) {
-      display: none;
-    }
+    z-index: 10;
+ 
   }
 `;
